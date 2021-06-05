@@ -3908,7 +3908,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
           //check if iFRAME
           if(this.$img[0].nodeName == "IFRAME"){
-            this.$img[0].style.transform = "translate3D(0%, " + parallax + "px, 0)";
+            this.$img[0].style.transform = "translate3D(-50%, " + parallax + "px, 0)";
           } else{
             this.$img[0].style.transform = "translate3D(-50%, " + parallax + "px, 0)";
           }

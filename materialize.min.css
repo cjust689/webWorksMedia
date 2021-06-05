@@ -2643,7 +2643,7 @@ video.responsive-video {
     z-index: -1
 }
 
-.parallax-container .parallax img, .parallax-container .parallax video  {
+.parallax-container .parallax img, .parallax-container .parallax video, .parallax-container .parallax iframe{
     opacity: 0;
     position: absolute;
     left: 50%;
