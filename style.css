@@ -103,9 +103,12 @@ nav{
 }
 
 .parallax, .parallax-container{
-	/* pointer-events: none; */
+	pointer-events: none;
 }
 
-.iframe{
-	pointer-events: all;
+iframe{
+	pointer-events: auto; 
 }
+
+
+
