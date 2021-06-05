@@ -66,8 +66,16 @@ nav{
 
 .contactBTN{
 	position: fixed;
-	right: 5%;
-	bottom: 5%;
+width: 5em !important;
+height: 5em !important;
+font-size: 2em;
+right: 5%;
+bottom: 5%;
+line-height: 7.2em;
+}
+
+.btn-large i {
+    font-size: 3em !important;
 }
 
 
