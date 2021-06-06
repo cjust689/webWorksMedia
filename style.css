@@ -61,7 +61,7 @@ nav{
 
 
 .header-img{
-	height: 80%;
+	height: 70%;
 }
 
 .contactBTN{
@@ -118,5 +118,9 @@ iframe{
 	pointer-events: auto; 
 }
 
+
+h6{
+	padding: 1em;
+}
 
 
