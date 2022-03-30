@@ -1,77 +1,98 @@
-h1{
-
-
-/*font-family: acumin-pro-semi-condensed, sans-serif;*/
-
-font-weight: 900;
-
-font-style: normal
-
+* {
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    color: #f9a825;
 }
 
-p{
-	font-weight: 700;
-	font-style: normal
+h1 {
+    /*font-family: acumin-pro-semi-condensed, sans-serif;*/
+    font-weight: 900;
+    font-style: normal
 }
 
-
-html{
-	background-color: #231f20;
-	height: 100%;
+p {
+    font-weight: 700;
+    font-style: normal
 }
 
-html, body, .block {
-	height: 100%;
-  }
-
-#landing{
-	background-color: #231f20;
+h2 {
+    font-weight: 800;
 }
 
-.landing_image{
-
+.z-depth-3 {
+    background-color: #231f20 !important;
 }
 
-#red{height: 100%;}
-
-
-.carousel-item{
-	max-height: 100%;
+.section {
+    background-color: #f9a825 !important;
 }
 
-.brand-logo{
-	font-family: 'Montserrat', sans-serif;
-}
-
-nav{
-	background-color: black;
-}
-
-.fullHeight{
-	height: 100%;
-}
-
-#red,#blue,#green{
-	background-color: #ffffff;
-}
-
-.parallax{
-	background-color: #231f20;
+.grey-text{
+ color: hsl(210, 9%, 9%) !important
 }
 
 
-.header-img{
-	height: 70%;
+html {
+    background-color: #231f20;
+    height: 100%;
 }
 
-.contactBTN{
-	position: fixed;
-width: 5em !important;
-height: 5em !important;
-font-size: 2em;
-right: 5%;
-bottom: 5%;
-line-height: 7.2em;
+html,
+body,
+.block {
+    height: 100%;
+}
+
+#landing {
+    background-color: #231f20;
+}
+
+.landing_image {}
+
+#red {
+    height: 100%;
+}
+
+
+.carousel-item {
+    max-height: 100%;
+}
+
+.brand-logo {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    background-color: black;
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+#red,
+#blue,
+#green {
+    background-color: #ffffff;
+}
+
+.parallax {
+    background-color: #231f20;
+}
+
+
+.header-img {
+    height: 70%;
+}
+
+.contactBTN {
+    position: fixed;
+    width: 5em !important;
+    height: 5em !important;
+    font-size: 2em;
+    right: 5%;
+    bottom: 5%;
+    line-height: 7.2em;
 }
 
 .btn-large i {
@@ -81,50 +102,51 @@ line-height: 7.2em;
 
 
 .material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
 
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
 
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
 
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+    /* Support for IE. */
+    font-feature-settings: 'liga';
 }
 
 
-nav{
-	height: 05%
+nav {
+    height: 05%
 }
 
-.parallax, .parallax-container{
-	pointer-events: none;
+.parallax,
+.parallax-container {
+    pointer-events: none;
 }
 
-iframe{
-	pointer-events: auto; 
-}
-
-
-h6{
-	padding: 1em;
+iframe {
+    pointer-events: auto;
 }
 
 
-img{
-	width: 100vw;
+h6 {
+    padding: 1em;
 }
 
+
+img {
+    width: 100vw;
+}
