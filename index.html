@@ -21,8 +21,15 @@
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelectorAll('.carousel');
+    const carouselPhoto = document.querySelectorAll('.carouselPhoto');
     M.Carousel.init(carousel, {
         fullWidth: true,
+        indicators: false,
+    });
+    
+    M.Carousel.init(carouselPhoto, {
+        fullWidth: true,
+        duration: 1,
         indicators: true,
     });
     let elems = document.querySelectorAll('.parallax');
@@ -31,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <body>
-    <li><a class="contactBTN pulse btn-floating btn-large section" href="mailto:webworksmedia.club@webworksmedia.club?subject=WebWorksMediaInquiry&body=Message"><i class="large material-icons black-text">email</i></a></li>
+    <li><a class="contactBTN pulse btn-floating btn-large section" href="mailto:justin@webworksmedia.club?subject=WebWorksMediaInquiry&body=Message"><i class="large material-icons black-text">email</i></a></li>
     <div class="parallax-container header-img" style="height:70%;">
         <div class="parallax">
             <img src="./img/Asset 17.svg">
@@ -78,6 +85,26 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="row container">
             </div>
         </div>
+        <!-- Carosel -->
+        <div class="carouselPhoto carousel">
+            <a class="carousel-item" href="#one!"><img src="./img/photos/DSC01114-2.jpg"></a>
+            <a class="carousel-item" href="#two!"><img src="./img/photos/DSC00057.jpg"></a>
+            <a class="carousel-item" href="#three!"><img src="./img/photos/DSC00302.jpg"></a>
+            <a class="carousel-item" href="#four!"><img src="./img/photos/DSC00567.jpg"></a>
+            <a class="carousel-item" href="#five!"><img src="./img/photos/DSC03229.jpg"></a>
+            <a class="carousel-item" href="#six!"><img src="./img/photos/DSC03076.jpg"></a>
+            <a class="carousel-item" href="#seven!"><img src="./img/photos/DSC02096.jpg"></a>
+            <a class="carousel-item" href="#eight!"><img src="./img/photos/DSC02084.jpg"></a>
+            <a class="carousel-item" href="#nine!"><img src="./img/photos/DSC02227.jpg"></a>
+            <a class="carousel-item" href="#ten!"><img src="./img/photos/DSC02318.jpg"></a>
+            <a class="carousel-item" href="#eleven!"><img src="./img/photos/DSC01567.jpg"></a>
+            
+          </div>
+        <div class="section">
+            <div class="row container">
+            </div>
+        </div>
+        <!-- Dominican 1 -->
         <div class="parallax-container">
             <div class="row" style="position: relative; top: 0%;}">
                 <div class="center col s3 yellow darken-3 z-depth-3">
