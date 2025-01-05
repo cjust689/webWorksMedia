@@ -38,11 +38,28 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <body>
-    <div class="row white">
-        <div class="col m4 shrsl_ShareASale_productShowCaseTarget_53733"></div>
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <form id="galleryForm">
+            <label for="galleryUrl">Enter your gallery URL:</label><br>
+            <input type="url" id="galleryUrl" placeholder="https://example.com" required style="width: 100%; padding: 8px; margin: 10px 0;">
+            <button type="submit" style="padding: 10px 20px;">Submit</button>
+        </form>
     </div>
+    <section>
+        <div class="row">
+        </div>
+        <div class="row">
+            <li style="list-style-type: none; position: fixed; top: 10px; left: 10px;"><a id="openPopup" class="pulse btn-large white black-text">view Your Gallery</a></li>
+        </div>
+    </section>
+<!--
+<div class="row white">
+    <div class="col m4 shrsl_ShareASale_productShowCaseTarget_53733"></div>
+</div>
 <script type="text/javascript"  src="https://showcase.shareasale.com/shareASale_liveWidget_loader.js?dt=12162024123016"></script>
 <script type="text/javascript">shrsl_ShareASale_liveWid_Init(53733, 4526369, 'shrsl_ShareASale_liveWid_leaderBoard_populate');</script> 
+-->
     <li><a class="contactBTN pulse btn-floating btn-large section" href="mailto:justin@webworksmedia.club?subject=WebWorksMediaInquiry&body=Message"><i class="large material-icons black-text">email</i></a></li>
     <div class="parallax-container header-img" style="height:70%;">
         <div class="parallax">
@@ -306,5 +323,42 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </footer>
 </body>
+<script type="text/javascript">
+    const openPopupBtn = document.getElementById('openPopup');
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
+    const galleryForm = document.getElementById('galleryForm');
+// Show the popup
+    openPopupBtn.addEventListener('click', () => {
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+    });
 
+    // Hide the popup when clicking on the overlay
+    overlay.addEventListener('click', () => {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+    });
+
+    // Handle form submission
+    galleryForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const galleryUrl = document.getElementById('galleryUrl').value;
+
+    // Allow only URLs from specific domains
+    const allowedDomains = ['www.evlaa.com', 'www.webworksmedia.club','evlaa.com', 'webworksmedia.club'];
+    try {
+        const url = new URL(galleryUrl);
+        if (!allowedDomains.some(domain => url.hostname.endsWith(domain))) {
+            alert('Invalid URL. Please enter a URL from a trusted domain.');
+            return;
+        }
+        window.open(galleryUrl, '_blank');
+    } catch (error) {
+        alert('Invalid URL format.');
+    }
+        popup.style.display = 'none'; // Hide the popup
+        overlay.style.display = 'none'; // Hide the overlay
+    });
+</script>
 </html>
