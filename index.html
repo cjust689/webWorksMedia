@@ -20,20 +20,20 @@
 </head>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelectorAll('.carousel');
-    const carouselPhoto = document.querySelectorAll('.carouselPhoto');
-    M.Carousel.init(carousel, {
+    const carousel = document.querySelectorAll('.carouselPhoto')
+    const carouselObject = M.Carousel.init(carousel, {
         fullWidth: true,
         indicators: false,
-    });
-    
-    M.Carousel.init(carouselPhoto, {
-        fullWidth: true,
-        duration: 1,
-        indicators: true,
-    });
-    let elems = document.querySelectorAll('.parallax');
-    let instances = M.Parallax.init(elems);
+        duration: 200,
+    })
+
+    const instance = M.Carousel.getInstance(carousel[0])
+    const elems = document.querySelectorAll('.parallax')
+    const instances = M.Parallax.init(elems)
+
+    setInterval(() => {
+        instance.next()
+    }, 2500)
 });
 </script>
 
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="row container">
             </div>
         </div>
-        <!-- Carosel -->
+        <!-- Carousel -->
         <div class="carouselPhoto carousel">
             <a class="carousel-item" href="#one!"><img src="./img/photos/DSC01114-2.jpg"></a>
             <a class="carousel-item" href="#two!"><img src="./img/photos/DSC00057.jpg"></a>
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <!-- Attributes Inc 1 -->
         <div class="parallax-container">
-            <div class="row" style="position: relative; top: 0%;}">
+            <div class="row" style="position: relative; top: 0%;">
                 <div class="center col s3 yellow darken-3 z-depth-3">
                     <div>
                         <img style=" padding: 2em;width: 100%;" src="./img/anamoly.png">
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
         <div class="parallax-container">
-            <div class="row" style="position: relative; top: 0%;}">
+            <div class="row" style="position: relative; top: 0%;">
                 <div class="center col s3 yellow darken-3 z-depth-3">
                     <div>
                         <img style=" padding: 2em;width: 50%;" src="./img/bas.png">
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <!-- video 2 -->
         <div class="parallax-container">
-            <div class="row" style="position: relative; top: 0%;}">
+            <div class="row" style="position: relative; top: 0%;">
                 <div class="center col s3 yellow darken-3 z-depth-3">
                     <div>
                         <img style=" padding: 2em;width: 100%;" src="./img/clubfro.png">
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <!-- iTRACS -->
         <div class="parallax-container">
-            <div class="row" style="position: relative; top: 0%;}">
+            <div class="row" style="position: relative; top: 0%;">
                 <div class="center col s3 yellow darken-3 z-depth-3">
                     <div>
                         <img style=" padding: 2em;width: 100%;" src="./img/commscope.png">
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
         <div class="parallax-container">
-            <div class="row" style="position: relative; top: 0%;}">
+            <div class="row" style="position: relative; top: 0%;">
                 <div class="center col s3 yellow darken-3 z-depth-3">
                     <div>
                         <img style=" padding: 2em;width: 100%;" src="./img/patio.png">
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <!-- thePatioATL -->
         <div class="parallax-container">
-            <div class="row" style="position: relative; top: 0%;}">
+            <div class="row" style="position: relative; top: 0%;">
                 <div class="center col s3 yellow darken-3 z-depth-3">
                     <h2 style="font-family: 'Hurricane', cursive;" class="header grey-text">Takia & Jemal</h2>
                     <p class="">
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <!-- Attributes Inc 1 -->
         <div class="parallax-container">
-            <div class="row" style="position: relative; top: 0%;}">
+            <div class="row" style="position: relative; top: 0%;">
                 <div class="center col s3 yellow darken-3 z-depth-3">
                     <div>
                         <img style=" padding: 2em;width: 70%;" src="./img/attributes.png">
@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <!-- Ireland -->
         <div class="parallax-container">
-            <div class="row" style="position: relative; top: 0%;}">
+            <div class="row" style="position: relative; top: 0%;">
                 <div class="center col s3 yellow darken-3 z-depth-3">
                     <div>
                         <img style=" padding: 2em;width: 70%;" src="./img/ireland.png">
@@ -281,7 +281,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
         <div class="parallax-container">
-            <div class="row" style="position: relative; top: 0%;}">
+            <div class="row" style="position: relative; top: 0%;">
                 <div class="center col s3 yellow darken-3 z-depth-3">
                     <div>
                         <img style=" padding: 2em;width: 70%;" src="./img/eferfc.png">
