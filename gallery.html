@@ -1,110 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Event Galleries – WebWorks Media</title>
-    <link rel="stylesheet" href="https://use.typekit.net/rrm0wln.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="materialize.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Ubuntu&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #231f20;
-            color: #fff;
-            font-family: 'Rubik', sans-serif;
-            font-size: 1.5rem; /* Increased from browser default */
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebWorks Media Galleries</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+      text-align: center;
+    }
 
-        h3 {
-            font-size: 3rem;
-        }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
 
-        p {
-            font-size: 2rem;
-        }
-        a {
-            font-size: 1.8rem;
-        }
-        .container {
-            margin-top: 100px;
-        }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
 
-        .btn-large {
-            margin-top: 2rem;
-            font-size: 1.1rem;
-        }
+    .subtitle {
+      font-size: 1rem;
+      color: #aaa;
+      margin-bottom: 3rem;
+    }
 
-        .logo {
-            max-width: 600px;
-            width: 80%;
-            margin: 0 auto 20px auto;
-            display: block;
-        }
-    </style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding-bottom: 3rem;
+    }
+
+    .gallery-card {
+      background-color: #1c1c1c;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(255, 165, 0, 0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .gallery-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 24px rgba(255, 165, 0, 0.35);
+    }
+
+    .card-banner {
+      background: url('./img/Asset 17.svg') center/cover no-repeat;
+      height: 160px;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-content h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #ffa500;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-top: 0.3rem;
+    }
+
+    .coming-soon {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .footer-links {
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    .footer-links a {
+      color: #ffa500;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+
+    .section-heading {
+      font-size: 1.4rem;
+      color: #ffa500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-    <div class=" center-align">
-         <!-- Logo Header -->
-        <img src="./img/Asset 17.svg" alt="WebWorks Media Logo" class="logo">
-        <h3 class="white-text">📸 Event Galleries</h3>
-        <p>
-            Select your gallery below. If your event isn't listed, check back later or 
-            <a href="mailto:justin@webworksmedia.club?subject=Gallery%20Inquiry">contact us</a>.
-        </p>
+  <div class="container">
+    <h1>📸 Event Galleries</h1>
+    <p class="subtitle">Experience the energy — browse & purchase photos from recent events.</p>
 
-       
-        
-        <div style="border-top: 2px solid #ccc; margin: 40px auto; width: 80%;"></div>
+    <div class="section-heading">Now Available</div>
+    <div class="gallery-grid">
+      <a href="https://www.evlaa.com/app/collections/573dcd30-246b-4632-a274-c6d4e25e0500" class="gallery-card">
+        <div class="card-banner" style="background-image: url('./img/photos/A6708025.jpg');"></div>
+        <div class="card-content">
+          <h3>i9 Sports – Summer 2025</h3>
+          <p>Athletics • Gallery Live</p>
+        </div>
+      </a>
 
-        
-        <!-- Sample Gallery Button -->
-        <div>
-            <a class="btn-large black-text" 
-            href="https://www.evlaa.com/app/collections/573dcd30-246b-4632-a274-c6d4e25e0500 " 
-            target="_blank"
-            style="background-color: #f9a825 ">
-                i9 Sports - 2025 Summer Season (Athletics)
-            </a>
+      <a href="https://www.evlaa.com/app/collections/fc8fc530-2d5e-4051-8497-80d1db4db3b4" class="gallery-card">
+        <div class="card-banner" style="background-image: url('./img/photos/A6700439.jpg');"></div>
+        <div class="card-content">
+          <h3>WOD #1 – Battle at the Ballpark</h3>
+          <p>Now Available</p>
         </div>
-        <div>
-            <a class="btn-large black-text" 
-            href="https://www.evlaa.com/app/collections/18789c88-3a98-4197-8da6-b77ce372f384" 
-            target="_blank"
-            style="background-color: #f9a825 ">
-                Master Gallery Battle At The Ballpark - 2025
-            </a>
+        <a href="https://www.evlaa.com/app/collections/82cd8b1c-f8c0-4caa-8a22-cae5b2d90d15 " class="gallery-card">
+        <div class="card-banner" style="background-image: url('./img/photos/A6701701.jpg');"></div>
+        <div class="card-content">
+          <h3>WOD #2 – Battle at the Ballpark</h3>
+          <p>Now Available</p>
         </div>
-        <div>
-            <a class="btn-large black-text" 
-            href="https://www.evlaa.com/app/collections/fc8fc530-2d5e-4051-8497-80d1db4db3b4" 
-            target="_blank"
-            style="background-color: #f9a825 ">
-                WOD#1 Battle At The Ballpark - 2025
-            </a>
+      </a>
+      <a href="https://www.evlaa.com/app/collections/920848a2-566b-4343-afe9-877c1e0a9a49" class="gallery-card">
+        <div class="card-banner" style="background-image: url('./img/photos/A6704561.jpg');"></div>
+        <div class="card-content">
+          <h3>WOD #3 – Battle at the Ballpark</h3>
+          <p>Now Available</p>
         </div>
-        <div>
-            <a class="btn-large black-text" 
-            href="https://www.evlaa.com/app/collections/82cd8b1c-f8c0-4caa-8a22-cae5b2d90d15" 
-            target="_blank"
-            style="background-color: #f9a825 ">
-                WOD#2 Battle At The Ballpark - 2025
-            </a>
+      </a>
+      <a href="https://www.evlaa.com/app/collections/18789c88-3a98-4197-8da6-b77ce372f384" class="gallery-card">
+        <div class="card-banner" style="background-image: url('./img/photos/A6703943.jpg');"></div>
+        <div class="card-content">
+          <h3>Master Gallery – Battle at the Ballpark</h3>
+          <p>Now Available</p>
         </div>
-        <div>
-            <a class="btn-large black-text" 
-            href="https://www.evlaa.com/app/collections/920848a2-566b-4343-afe9-877c1e0a9a49" 
-            target="_blank"
-            style="background-color: #f9a825 ">
-                WOD#3 Battle At The Ballpark - 2025
-            </a>
-        </div>
-        <div class="row"><a class="btn-large black-text" 
-           href="https://webworksmedia.club/" 
-           target="_blank"
-           style="background-color: #f9a825 ">
-            Back to Home
-        </a></div>
+      </a>
     </div>
+
+    <div class="section-heading">Coming Soon</div>
+    <div class="gallery-grid">
+    </div>
+
+
+    <div class="footer-links">
+      <a href="mailto:your@email.com">Contact</a> |
+      <a href="/">Back to Home</a>
+    </div>
+  </div>
 </body>
 </html>
