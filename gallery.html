@@ -186,15 +186,30 @@
   </div>
   
 <!-- Track outbound link clicks -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
-    if (!link.href.includes(location.hostname)) {
-      link.addEventListener('click', function() {
-        gtag('event', 'affiliate_click', {
-          'event_category': 'outbound',
-          'event_label': link.href,
-          'transport_type': 'beacon'
+<<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('a[href^="http"]').forEach(function (link) {
+    const isExternal = !link.href.includes(location.hostname);
+    if (isExternal) {
+      link.addEventListener('click', function () {
+        let eventName = 'affiliate_click';
+        let category = 'outbound';
+
+        if (link.href.includes('amazon.')) {
+          eventName = 'amazon_click';
+          category = 'amazon';
+        } else if (link.href.includes('beacons.ai')) {
+          eventName = 'beacons_click';
+          category = 'beacons';
+        } else if (link.href.includes('evlaa.com')) {
+          eventName = 'evlaa_click';
+          category = 'evlaa';
+        }
+
+        gtag('event', eventName, {
+          event_category: category,
+          event_label: link.href,
+          transport_type: 'beacon'
         });
       });
     }
