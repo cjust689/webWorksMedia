@@ -184,5 +184,22 @@
       <a href="/">Back to Home</a>
     </div>
   </div>
+  
+<!-- Track outbound link clicks -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
+    if (!link.href.includes(location.hostname)) {
+      link.addEventListener('click', function() {
+        gtag('event', 'click', {
+          'event_category': 'outbound',
+          'event_label': link.href,
+          'transport_type': 'beacon'
+        });
+      });
+    }
+  });
+});
+</script>
 </body>
 </html>
